@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import MobileNav from "@/components/MobileNav";
+import SearchPalette from "@/components/SearchPalette";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +27,7 @@ const navLinks = [
   { href: "/characters", label: "Characters" },
   { href: "/timeline", label: "Timeline" },
   { href: "/compare", label: "Compare" },
+  { href: "/pathways", label: "Pathways" },
 ];
 
 export default function RootLayout({
@@ -55,12 +58,9 @@ export default function RootLayout({
                   </Link>
                 ))}
               </div>
-              <div className="md:hidden flex items-center">
-                <button className="text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 9h16.5m-16.5 6.75h16.5" />
-                  </svg>
-                </button>
+              <div className="flex items-center gap-2">
+                <SearchPalette />
+                <MobileNav />
               </div>
             </div>
           </nav>
