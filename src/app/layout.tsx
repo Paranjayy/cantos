@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 
 const navLinks = [
   { href: "/epics", label: "Epics" },
+  { href: "/reading-order", label: "Read" },
   { href: "/family-tree", label: "Trees" },
   { href: "/characters", label: "Characters" },
   { href: "/relationships", label: "Graph" },
@@ -31,7 +32,6 @@ const navLinks = [
   { href: "/map", label: "Map" },
   { href: "/compare", label: "Compare" },
   { href: "/quotes", label: "Quotes" },
-  { href: "/quiz", label: "Quiz" },
 ];
 
 export default function RootLayout({
