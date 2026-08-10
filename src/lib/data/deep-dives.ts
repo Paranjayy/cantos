@@ -1,0 +1,121 @@
+export interface EpicDeepDive {
+  slug: string;
+  structure: { book: string; summary: string }[];
+  keyScenes: { title: string; description: string; significance: string }[];
+  legacy: string;
+  influence: string[];
+  funFact: string;
+}
+
+export const deepDives: EpicDeepDive[] = [
+  {
+    slug: "mahabharata",
+    structure: [
+      { book: "Adi Parva", summary: "The origins — birth of the Kuru dynasty, the dice game, and the seeds of war." },
+      { book: "Sabha Parva", summary: "The dice game and its aftermath — Draupadi's humiliation." },
+      { book: "Vana Parva", summary: "The 13-year exile in the forest — encounters with sages, demons, and divine beings." },
+      { book: "Virata Parva", summary: "The incognito year — the Pandavas hiding in the court of King Virata." },
+      { book: "Udyoga Parva", summary: "Failed diplomacy — Krishna's peace mission and the preparations for war." },
+      { book: "Bhishma Parva", summary: "The first 10 days of war — Bhishma as commander, the Bhagavad Gita." },
+      { book: "Drona Parva", summary: "Days 11-15 — Drona as commander, the Chakravyuha, Abhimanyu's death." },
+      { book: "Karna Parva", summary: "Days 16-17 — Karna as commander, his duel with Arjuna." },
+      { book: "Shalya Parva", summary: "Days 17-18 — the final day, Duryodhana's defeat." },
+      { book: "Sauptika Parva", summary: "The night raid — Ashwatthama's massacre of the sleeping Pandava camp." },
+      { book: "Stri Parva", summary: "The lament — Gandhari's curse, the women's grief." },
+      { book: "Shanti Parva", summary: "Bhishma's teachings on governance and dharma to Yudhishthira." },
+      { book: "Anushasana Parva", summary: "Bhishma's final teachings — ethics, philosophy, and the nature of dharma." },
+      { book: "Ashvamedhika Parva", summary: "The horse sacrifice — Yudhishthira's final ritual." },
+      { book: "Mausal Parva", summary: "The Yadava civil war — Krishna's clan destroys itself." },
+      { book: "Mahaprasthanika Parva", summary: "The great departure — the Pandavas' final journey to heaven." },
+      { book: "Swargarohana Parva", summary: "The ascent to heaven — Yudhishthira's final test." },
+    ],
+    keyScenes: [
+      { title: "The Dice Game", description: "Shakuni manipulates the dice. Yudhishthira loses everything — kingdom, brothers, himself, and finally Draupadi.", significance: "The inciting incident. Sets the entire war in motion." },
+      { title: "Draupadi's Disrobing", description: "Dushasana drags Draupadi into the assembly hall and attempts to strip her. Krishna protects her miraculous unending sari.", significance: "The moral crisis of the epic. The elders' silence is the real tragedy." },
+      { title: "The Bhagavad Gita", description: "On the battlefield, Arjuna breaks down. Krishna reveals the cosmic truth — duty, devotion, and the nature of the self.", significance: "The philosophical heart of Hinduism. 700 verses that changed Indian thought." },
+      { title: "Abhimanyu in the Chakravyuha", description: "The 16-year-old son of Arjuna enters the impenetrable formation alone. He fights six warriors at once before being killed.", significance: "The most heartbreaking battle scene in any epic. The unfairness of war made visceral." },
+      { title: "Draupadi's Vow", description: "After the war, Draupadi washes her hair with Dushasana's blood and lights Duryodhana's hair with his brains.", significance: "Justice delayed but not denied. The feminine rage that drives the final reckoning." },
+    ],
+    legacy: "The Mahabharata is not just an epic — it's an encyclopedia of Indian civilization. It contains the Bhagavad Gita, the first concepts of dharma and karma, and narratives that have shaped Hindu practice for 2,500 years.",
+    influence: ["Bhagavad Gita (Hindu scripture)", "Indonesian Wayang theater", "Indian classical dance", "Modern Indian politics and law", "Peter Brook's 1985 marathon theater production"],
+    funFact: "If you read one verse of the Mahabharata per day, it would take you 27 years to finish.",
+  },
+  {
+    slug: "iliad",
+    structure: [
+      { book: "Book 1", summary: "The wrath begins — Agamemnon takes Briseis, Achilles withdraws." },
+      { book: "Book 2", summary: "The catalog of ships — the Greek forces are enumerated." },
+      { book: "Book 3", summary: "Paris and Menelaus duel — Helen watches from the walls." },
+      { book: "Book 4", summary: "The truce is broken — fighting resumes." },
+      { book: "Book 5", summary: "Diomedes' aristeia — the best day of any Greek hero." },
+      { book: "Book 6", summary: "Hector and Andromache — the tenderest scene in the Iliad." },
+      { book: "Books 7-8", summary: "Hector's duel with Ajax; the Greeks build their wall." },
+      { book: "Books 9-10", summary: "The embassy to Achilles; Odysseus' night raid." },
+      { book: "Books 11-12", summary: "Agamemnon's aristeia; Hector breaks through the wall." },
+      { book: "Book 16", summary: "The death of Patroclus — the Iliad's turning point." },
+      { book: "Book 18", summary: "Achilles' grief; Hephaestus forges new armor." },
+      { book: "Book 19", summary: "Achilles reconciles with Agamemnon — but it's too late." },
+      { book: "Book 20", summary: "Achilles returns to battle — the gods join the fight." },
+      { book: "Book 22", summary: "The death of Hector — Achilles' vengeance." },
+      { book: "Book 23", summary: "The funeral games for Patroclus." },
+      { book: "Book 24", summary: "Priam ransoms Hector's body — the Iliad's true ending." },
+    ],
+    keyScenes: [
+      { title: "The Wrath of Achilles", description: "Agamemnon takes Briseis. Achilles withdraws from battle, praying to his mother Thetis that the Greeks suffer.", significance: "The incipit. The first word of Western literature is 'mēnis' — wrath." },
+      { title: "Hector and Andromache", description: "Hector meets his wife and baby son at the Scaean Gate. He reaches for the child but the baby cries at his helmet.", significance: "The human cost of war, rendered in six devastating lines." },
+      { title: "The Death of Patroclus", description: "Patroclus fights in Achilles' armor, kills many Trojans, then Apollo stuns him and Hector kills him.", significance: "The turning point. Achilles' wrath consumes itself — grief takes its place." },
+      { title: "Achilles Drags Hector", description: "After killing Hector, Achilles ties his body to his chariot and drags it around Troy's walls.", significance: "The lowest point of heroism — glory becomes savagery." },
+      { title: "Priam Ransoms the Body", description: "The old king enters Achilles' tent at night. He kisses the hands that killed his son. Achilles weeps for his own father.", significance: "The Iliad's true ending. Two enemies find their shared humanity in grief." },
+    ],
+    legacy: "The Iliad is the foundation of Western literature. Every subsequent work about war, honor, mortality, and human nature is, in some sense, a response to Homer.",
+    influence: ["Virgil's Aeneid (direct imitation)", "Shakespeare's Troilus and Cressida", "Pat Barker's Regeneration trilogy", "The film Troy", "Christopher Nolan's upcoming adaptation"],
+    funFact: "The Iliad never describes the fall of Troy — the wooden horse story comes from other traditions. The epic ends with Hector's funeral.",
+  },
+  {
+    slug: "odyssey",
+    structure: [
+      { book: "Books 1-4", summary: "Telemachus' journey — searching for news of his father." },
+      { book: "Books 5-8", summary: "Odysseus on Calypso's island; his arrival in Phaeacia." },
+      { book: "Books 9-12", summary: "Odysseus tells his story — the Cyclops, Circe, the Underworld." },
+      { book: "Books 13-16", summary: "Return to Ithaca — Odysseus is recognized by his son." },
+      { book: "Books 17-20", summary: "The beggar in his own palace — testing the suitors." },
+      { book: "Books 21-22", summary: "The bow contest and the slaughter of the suitors." },
+      { book: "Book 23", summary: "Penelope tests Odysseus — the secret of their bed." },
+      { book: "Book 24", summary: "Reconciliation — Odysseus reunites with Laertes." },
+    ],
+    keyScenes: [
+      { title: "The Cyclops", description: "Odysseus blinds Polyphemus and escapes by hiding under sheep. His hubris makes him shout his real name.", significance: "Cunning triumphs over brute force — but pride has consequences." },
+      { title: "The Sirens", description: "Odysseus has himself tied to the mast so he can hear the Sirens' song without jumping.", significance: "Knowledge as both gift and curse — wanting what you cannot have." },
+      { title: "The Underworld", description: "Odysseus meets the shade of his mother, Achilles, Agamemnon, and the prophet Tiresias.", significance: "The hero confronts death directly — and returns changed." },
+      { title: "The Bow Contest", description: "Odysseus strings his own bow and shoots through twelve axe-handles — then turns on the suitors.", significance: "The homecoming no one expected. The beggar reveals himself." },
+      { title: "The Bed Test", description: "Penelope tests Odysseus by asking to move their bed. He says it can't be moved — he built it around a living olive tree.", significance: "Only the true wife and husband know this secret. Intimacy as identity." },
+    ],
+    legacy: "The Odyssey is the original hero's journey — every adventure story from Tolkien to Star Wars traces its DNA back to Homer.",
+    influence: ["James Joyce's Ulysses", "The Coen Brothers' O Brother Where Art Thou?", "Margaret Atwood's The Penelopiad", "The film O Brother Where Art Thou?", "Every road narrative in Western literature"],
+    funFact: "The word 'odyssey' itself now means any long, eventful journey — the epic gave us a word for the human experience.",
+  },
+  {
+    slug: "gilgamesh",
+    structure: [
+      { book: "Tablet 1-2", summary: "Gilgamesh's tyranny; the creation of Enkidu." },
+      { book: "Tablet 3", summary: "The journey to the Cedar Forest." },
+      { book: "Tablet 4-5", summary: "Killing Humbaba; the Bull of Heaven." },
+      { book: "Tablet 6", summary: "Ishtar's rejection; Enkidu's curse." },
+      { book: "Tablet 7", summary: "The death of Enkidu." },
+      { book: "Tablet 8-9", summary: "Gilgamesh's grief and the quest for immortality." },
+      { book: "Tablet 10", summary: "The journey to Utnapishtim." },
+      { book: "Tablet 11", summary: "The flood story — the oldest in literature." },
+      { book: "Tablet 12", summary: "The plant of youth lost; Gilgamesh returns to Uruk." },
+    ],
+    keyScenes: [
+      { title: "Enkidu's Creation", description: "The gods create Enkidu from clay to counterbalance Gilgamesh's tyranny. He lives among animals until Shamhat civilizes him.", significance: "The first 'noble savage' in literature — nature vs. civilization." },
+      { title: "Killing Humbaba", description: "Gilgamesh and Enkidu slay the guardian of the Cedar Forest, defying the gods.", significance: "The first great act of friendship — and the first great transgression." },
+      { title: "Enkidu's Death", description: "Enkidu falls ill and dies over twelve days. Gilgamesh weeps for seven days and seven nights.", significance: "The oldest literary depiction of grief. Gilgamesh is never the same." },
+      { title: "The Flood", description: "Utnapishtim tells Gilgamesh about the great flood — a story that predates Noah by a thousand years.", significance: "The oldest flood narrative. Direct precursor to the Biblical story." },
+      { title: "The Plant of Youth", description: "Gilgamesh finds the plant that restores youth — then a serpent steals it while he bathes.", significance: "The cruelest moment in literature. Mortality is inescapable." },
+    ],
+    legacy: "The oldest surviving work of literature. Gilgamesh is the first literary hero, the first to confront death, and the first to seek meaning beyond it.",
+    influence: ["The Biblical flood narrative (Noah)", "The concept of the 'hero's journey'", "Tolkien's Beren and Luthien", "The Epic of Sundiata (West African parallel)"],
+    funFact: "The flood story in Gilgamesh (Tablet 11) predates the Biblical account of Noah by over 1,000 years.",
+  },
+];

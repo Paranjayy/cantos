@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/epics", label: "Epics" },
   { href: "/family-tree", label: "Family Trees" },
   { href: "/characters", label: "Characters" },
+  { href: "/relationships", label: "Relationship Graph" },
   { href: "/connections", label: "Connections" },
   { href: "/map", label: "World Map" },
   { href: "/timeline", label: "Timeline" },

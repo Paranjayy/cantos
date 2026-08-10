@@ -3,6 +3,7 @@ import Link from "next/link";
 import { epics, getEpicBySlug } from "@/lib/data/epics";
 import { getCharactersByEpic } from "@/lib/data/characters";
 import { timelineEvents } from "@/lib/data/timeline";
+import { deepDives } from "@/lib/data/deep-dives";
 
 export function generateStaticParams() {
   return epics.map((epic) => ({ slug: epic.slug }));
@@ -15,6 +16,7 @@ export default async function EpicPage(props: { params: Promise<{ slug: string }
 
   const characters = getCharactersByEpic(epic.slug);
   const events = timelineEvents.filter((e) => e.epic === epic.slug);
+  const dive = deepDives.find((d) => d.slug === epic.slug);
 
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
@@ -77,6 +79,60 @@ export default async function EpicPage(props: { params: Promise<{ slug: string }
         </div>
       </section>
 
+      {/* Structure */}
+      {dive && (
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4 font-display">Structure</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {dive.structure.map((item) => (
+              <div
+                key={item.book}
+                className="p-3 rounded-xl border border-[var(--border)] bg-[var(--bg-card)]"
+              >
+                <h3 className="font-semibold text-sm font-display">{item.book}</h3>
+                <p className="text-xs text-[var(--text-secondary)] mt-1">{item.summary}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Key Scenes */}
+      {dive && (
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4 font-display">Key Scenes</h2>
+          <div className="space-y-3">
+            {dive.keyScenes.map((scene, i) => (
+              <div
+                key={scene.title}
+                className="p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-card)]"
+              >
+                <div className="flex items-start gap-3">
+                  <div
+                    className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold font-display shrink-0 mt-0.5"
+                    style={{ backgroundColor: `${epic.color}20`, color: epic.color }}
+                  >
+                    {i + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold font-display">{scene.title}</h3>
+                    <p className="text-sm text-[var(--text-secondary)] mt-1">
+                      {scene.description}
+                    </p>
+                    <p
+                      className="text-xs mt-2 font-medium"
+                      style={{ color: epic.color }}
+                    >
+                      {scene.significance}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Characters */}
       {characters.length > 0 && (
         <section className="mb-12">
@@ -117,7 +173,7 @@ export default async function EpicPage(props: { params: Promise<{ slug: string }
 
       {/* Timeline Events */}
       {events.length > 0 && (
-        <section>
+        <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 font-display">
             Key Events
           </h2>
@@ -149,6 +205,40 @@ export default async function EpicPage(props: { params: Promise<{ slug: string }
             </div>
           </div>
         </section>
+      )}
+
+      {/* Legacy */}
+      {dive && (
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4 font-display">Legacy & Influence</h2>
+          <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] mb-4">
+            <p className="text-[var(--text-secondary)] leading-relaxed">{dive.legacy}</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {dive.influence.map((item) => (
+              <span
+                key={item}
+                className="px-3 py-1.5 rounded-lg text-sm border border-[var(--border)]"
+                style={{ backgroundColor: `${epic.color}10`, color: epic.color }}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Fun Fact */}
+      {dive && (
+        <div
+          className="p-6 rounded-2xl border-2 text-center"
+          style={{ borderColor: `${epic.color}40`, backgroundColor: `${epic.color}08` }}
+        >
+          <p className="text-xs uppercase tracking-widest mb-2" style={{ color: epic.color }}>
+            Did You Know?
+          </p>
+          <p className="text-[var(--text-secondary)] italic">{dive.funFact}</p>
+        </div>
       )}
     </div>
   );

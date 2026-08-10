@@ -2,6 +2,7 @@ import Link from "next/link";
 import { epics } from "@/lib/data/epics";
 import { getRandomFact } from "@/lib/data/facts";
 import RandomDiscovery from "@/components/RandomDiscovery";
+import EpicOfTheDay from "@/components/EpicOfTheDay";
 
 export default function Home() {
   return (
@@ -104,6 +105,11 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      {/* Epic of the Day */}
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <EpicOfTheDay />
       </section>
 
       {/* Features Preview */}

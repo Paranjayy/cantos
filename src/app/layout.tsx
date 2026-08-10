@@ -26,6 +26,7 @@ const navLinks = [
   { href: "/epics", label: "Epics" },
   { href: "/family-tree", label: "Trees" },
   { href: "/characters", label: "Characters" },
+  { href: "/relationships", label: "Graph" },
   { href: "/connections", label: "Links" },
   { href: "/map", label: "Map" },
   { href: "/compare", label: "Compare" },
