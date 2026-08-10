@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { epics } from "@/lib/data/epics";
 import { getRandomFact } from "@/lib/data/facts";
+import RandomDiscovery from "@/components/RandomDiscovery";
 
 export default function Home() {
   return (
@@ -190,6 +191,9 @@ export default function Home() {
 
       {/* Did You Know */}
       <DidYouKnow />
+
+      {/* Random Discovery */}
+      <RandomDiscovery />
     </div>
   );
 }

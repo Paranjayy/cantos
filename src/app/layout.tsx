@@ -27,7 +27,7 @@ const navLinks = [
   { href: "/family-tree", label: "Trees" },
   { href: "/characters", label: "Characters" },
   { href: "/connections", label: "Links" },
-  { href: "/timeline", label: "Timeline" },
+  { href: "/map", label: "Map" },
   { href: "/compare", label: "Compare" },
   { href: "/quotes", label: "Quotes" },
   { href: "/quiz", label: "Quiz" },

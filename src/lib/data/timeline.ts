@@ -68,4 +68,40 @@ export const timelineEvents: TimelineEvent[] = [
   { id: "dc2", epic: "divine-comedy", title: "Descent into Hell", description: "Dante descends through the nine circles of Hell.", era: "~1300 CE", sortYear: 1300, characters: ["dante", "virgil"], significance: "major" },
   { id: "dc3", epic: "divine-comedy", title: "Ascent of Purgatory", description: "Dante climbs the mountain of Purgatory.", era: "~1300 CE", sortYear: 1300, characters: ["dante", "virgil"], significance: "major" },
   { id: "dc4", epic: "divine-comedy", title: "Paradise", description: "Beatrice guides Dante through Heaven.", era: "~1300 CE", sortYear: 1301, characters: ["dante", "beatrice"], significance: "major" },
+
+  // More Mahabharata
+  { id: "m10", epic: "mahabharata", title: "Bhishma's Oath", description: "Devavrata vows celibacy so his father can marry Satyavati. He becomes Bhishma — 'the terrible'.", era: "~3100 BCE", sortYear: -3099, characters: ["devavrata", "shantanu"], significance: "major" },
+  { id: "m11", epic: "mahabharata", title: "Birth of Karna", description: "Kunti invokes Surya before marriage. Karna is born and abandoned.", era: "~3060 BCE", sortYear: -3060, characters: ["karna", "kunti"], significance: "major" },
+  { id: "m12", epic: "mahabharata", title: "Killing of Kamsa", description: "Krishna kills his evil uncle Kamsa in Mathura.", era: "~3040 BCE", sortYear: -3040, characters: ["krishna"], significance: "major" },
+  { id: "m13", epic: "mahabharata", title: "Burning of Lakshagriha", description: "Duryodhana tries to burn the Pandavas alive in a lac palace. They escape.", era: "~3025 BCE", sortYear: -3024, characters: ["duryodhana", "yudhishthira"], significance: "major" },
+  { id: "m14", epic: "mahabharata", title: "Draupadi Swayamvara", description: "Arjuna wins Draupadi by stringing Shiva's bow. She becomes wife to all five Pandavas.", era: "~3025 BCE", sortYear: -3023, characters: ["arjuna", "draupadi"], significance: "major" },
+
+  // More Ramayana
+  { id: "r6", epic: "ramayana", title: "Building the Bridge", description: "Hanuman and the monkey army build a bridge (Rama Setu) across the ocean to Lanka.", era: "~5088 BCE", sortYear: -5088, characters: ["rama", "hanuman"], significance: "major" },
+  { id: "r7", epic: "ramayana", title: "Ravana's Death", description: "Rama kills Ravana with a divine arrow. Sita is freed.", era: "~5086 BCE", sortYear: -5085, characters: ["rama", "ravana", "sita"], significance: "major" },
+  { id: "r8", epic: "ramayana", title: "Sita's Fire Test", description: "Sita proves her purity by walking through fire. Agni (fire god) testifies.", era: "~5086 BCE", sortYear: -5085, characters: ["sita", "rama"], significance: "major" },
+  { id: "r9", epic: "ramayana", title: "Sita's Final Departure", description: "Sita leaves the world, returning to the earth (her mother).", era: "~5080 BCE", sortYear: -5080, characters: ["sita"], significance: "major" },
+
+  // More Odyssey
+  { id: "o8", epic: "odyssey", title: "Scylla and Charybdis", description: "Odysseus navigates between a six-headed monster and a deadly whirlpool.", era: "~1173 BCE", sortYear: -1173, characters: ["odysseus"], significance: "major" },
+  { id: "o9", epic: "odyssey", title: "Lotus-Eaters", description: "Odysseus' crew eat the lotus fruit and forget their desire to return home.", era: "~1178 BCE", sortYear: -1178, characters: ["odysseus"], significance: "major" },
+
+  // More Iliad
+  { id: "i7", epic: "iliad", title: "The Trojan Horse", description: "The Greeks build a wooden horse and hide soldiers inside.", era: "~1180 BCE", sortYear: -1179, characters: ["odysseus"], significance: "major" },
+  { id: "i8", epic: "iliad", title: "Death of Priam", description: "Neoptolemus kills Priam at the altar of Zeus. Troy falls.", era: "~1180 BCE", sortYear: -1179, characters: ["priam"], significance: "major" },
+
+  // More Gilgamesh
+  { id: "g6", epic: "gilgamesh", title: "Killing of the Bull of Heaven", description: "Ishtar sends the Bull of Heaven. Gilgamesh and Enkidu slay it.", era: "~2700 BCE", sortYear: -2697, characters: ["gilgamesh", "enkidu", "ishtar"], significance: "major" },
+  { id: "g7", epic: "gilgamesh", title: "Meeting Utnapishtim", description: "Gilgamesh finds the one immortal man and learns about the great flood.", era: "~2700 BCE", sortYear: -2696, characters: ["gilgamesh", "utnapishtim"], significance: "major" },
+
+  // More Aeneid
+  { id: "a4", epic: "aeneid", title: "Aeneas in the Underworld", description: "Anchises shows Aeneas the future of Rome in the Underworld.", era: "~1175 BCE", sortYear: -1174, characters: ["aeneas", "anchises"], significance: "major" },
+  { id: "a5", epic: "aeneid", title: "The Shield of Aeneas", description: "Vulcan forges a shield depicting Rome's future, including Augustus' victory.", era: "~1171 BCE", sortYear: -1171, characters: ["aeneas"], significance: "major" },
+
+  // More Beowulf
+  { id: "b5", epic: "beowulf", title: "Beowulf becomes King", description: "After Hygelac's death, Beowulf rules the Geats for 50 years.", era: "~505 CE", sortYear: 505, characters: ["beowulf"], significance: "major" },
+
+  // More Divine Comedy
+  { id: "dc5", epic: "divine-comedy", title: "Meeting with Ulysses", description: "Dante meets Ulysses (Odysseus) in the Eighth Circle of Hell.", era: "~1300 CE", sortYear: 1300, characters: ["dante", "odysseus"], significance: "major" },
+  { id: "dc6", epic: "divine-comedy", title: "Dante meets Beatrice", description: "At the top of Purgatory, Virgil leaves and Beatrice appears.", era: "~1300 CE", sortYear: 1300, characters: ["dante", "beatrice", "virgil"], significance: "major" },
 ];
