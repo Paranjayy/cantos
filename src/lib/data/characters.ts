@@ -302,6 +302,196 @@ export const characters: Character[] = [
     ],
     archetype: "The Mortal God-King",
   },
+  // Mahabharata - more
+  {
+    id: "bhishma",
+    name: "Bhishma",
+    title: "The Grandfather",
+    epic: "mahabharata",
+    tradition: "Hindu",
+    role: "Kuru Patriarch / Commander",
+    description:
+      "Born Devavrata, he took a terrible vow of celibacy so his father could marry. The moral compass of the Kuru dynasty — forced to fight for the side he knows is wrong.",
+    traits: ["Duty", "Vow", "Celibacy", "Loyalty", "Tragedy"],
+    keyEvents: [
+      "Takes the vow of celibacy",
+      "Commands the Kaurava army",
+      "Cannot kill his grandnephews (Pandavas)",
+      "Lies on a bed of arrows for 58 days",
+      "Receives Shantanu's death blessing",
+    ],
+    relationships: [
+      { name: "Shantanu", type: "Father" },
+      { name: "Ganga", type: "Mother" },
+      { name: "Yudhishthira", type: "Grandnephew" },
+      { name: "Duryodhana", type: "Grandnephew" },
+    ],
+    archetype: "The Bound Warrior",
+  },
+  {
+    id: "bheema",
+    name: "Bhima",
+    title: "The Strongest",
+    epic: "mahabharata",
+    tradition: "Hindu",
+    role: "Second Pandava / Warrior",
+    description:
+      "Son of Vayu, the Wind God. Known for his immense physical strength, love of food, and fierce loyalty. He kills all 100 Kauravas.",
+    traits: ["Strength", "Loyalty", "Food", "Fury", "Brotherhood"],
+    keyEvents: [
+      "Poisoned by Duryodhana as a child",
+      "Kills all 100 Kauravas",
+      "Kills Dushasana (tears out his heart)",
+      "Kills Duryodhana in final duel",
+      "Breaks Bhima's thigh oath",
+    ],
+    relationships: [
+      { name: "Yudhishthira", type: "Brother" },
+      { name: "Arjuna", type: "Brother" },
+      { name: "Draupadi", type: "Wife" },
+      { name: "Duryodhana", type: "Nemesis" },
+    ],
+    archetype: "The Devoted Destroyer",
+  },
+  // Ramayana - more
+  {
+    id: "bharata-r",
+    name: "Bharata",
+    title: "The Devoted Brother",
+    epic: "ramayana",
+    tradition: "Hindu",
+    role: "Prince of Ayodhya / Regent",
+    description:
+      "Son of Kaikeyi who demanded Rama's exile. Despite gaining the throne, Bharata refuses to rule and instead serves as Rama's regent for 14 years.",
+    traits: ["Devotion", "Selflessness", "Duty", "Humility"],
+    keyEvents: [
+      "Refuses the throne",
+      "Governs as Rama's regent",
+      "Rules from Nandigrama (not the palace)",
+      "Waits for Rama's return",
+    ],
+    relationships: [
+      { name: "Rama", type: "Brother" },
+      { name: "Kaikeyi", type: "Mother" },
+      { name: "Dasharatha", type: "Father" },
+    ],
+    archetype: "The Selfless Servant",
+  },
+  // Iliad - more
+  {
+    id: "hector",
+    name: "Hector",
+    title: "Troy's Champion",
+    epic: "iliad",
+    tradition: "Greek",
+    role: "Trojan Prince / Commander",
+    description:
+      "The greatest warrior of Troy, defender of his city and family. Unlike Achilles, Hector fights not for personal glory but for duty. His death is the Iliad's emotional climax.",
+    traits: ["Duty", "Honor", "Courage", "Family", "Tragedy"],
+    keyEvents: [
+      "Kills Patroclus (mistaken for Achilles)",
+      "Chased around Troy by Achilles",
+      "Faces Achilles alone",
+      "Killed by Achilles",
+      "Body desecrated by Achilles",
+      "Priam ransoms Hector's body",
+    ],
+    relationships: [
+      { name: "Priam", type: "Father" },
+      { name: "Andromache", type: "Wife" },
+      { name: "Achilles", type: "Nemesis" },
+      { name: "Paris", type: "Brother" },
+    ],
+    archetype: "The Dutiful Defender",
+  },
+  {
+    id: "penelope",
+    name: "Penelope",
+    title: "The Faithful Wife",
+    epic: "odyssey",
+    tradition: "Greek",
+    role: "Queen of Ithaca",
+    description:
+      "Odysseus' wife, who waits 20 years for his return. She is not merely passive — she outwits the suitors with her weaving trick and tests Odysseus' identity upon his return.",
+    traits: ["Patience", "Cunning", "Loyalty", "Wit", "Endurance"],
+    keyEvents: [
+      "Waits 20 years for Odysseus",
+      "Weaves and unravels Laertes' shroud",
+      "Tests Odysseus with the secret of their bed",
+      "Reunites with Odysseus",
+    ],
+    relationships: [
+      { name: "Odysseus", type: "Husband" },
+      { name: "Telemachus", type: "Son" },
+      { name: "Athena", type: "Patron" },
+    ],
+    archetype: "The Steadfast Waiter",
+  },
+  {
+    id: "telemachus",
+    name: "Telemachus",
+    title: "The Searching Son",
+    epic: "odyssey",
+    tradition: "Greek",
+    role: "Odysseus' Son",
+    description:
+      "When the epic begins, Telemachus is a young man who has never known his father. His journey to find news of Odysseus is a coming-of-age story within the larger narrative.",
+    traits: ["Coming-of-age", "Courage", "Loyalty", "Impatience"],
+    keyEvents: [
+      "Journey to Pylos and Sparta",
+      "Fights alongside Odysseus against the suitors",
+      "Kills Antinous' father Eupeithes",
+    ],
+    relationships: [
+      { name: "Odysseus", type: "Father" },
+      { name: "Penelope", type: "Mother" },
+      { name: "Athena", type: "Guide" },
+    ],
+    archetype: "The Heir Apparent",
+  },
+  // Divine Comedy
+  {
+    id: "virgil-dc",
+    name: "Virgil",
+    title: "The Poet Guide",
+    epic: "divine-comedy",
+    tradition: "Christian / European",
+    role: "Guide through Hell and Purgatory",
+    description:
+      "The Roman poet who guides Dante through Hell and Purgatory. Represents human reason and classical wisdom — necessary but insufficient for salvation.",
+    traits: ["Wisdom", "Reason", "Authority", "Compassion"],
+    keyEvents: [
+      "Guides Dante through Hell",
+      "Guides Dante through Purgatory",
+      "Leaves Dante at the gates of Paradise",
+    ],
+    relationships: [
+      { name: "Dante", type: "Charge" },
+      { name: "Beatrice", type: "Successor Guide" },
+    ],
+    archetype: "The Reasonable Guide",
+  },
+  {
+    id: "beatrice",
+    name: "Beatrice",
+    title: "The Divine Beloved",
+    epic: "divine-comedy",
+    tradition: "Christian / European",
+    role: "Guide through Paradise",
+    description:
+      "Dante's beloved, who represents divine grace and revelation. She takes over from Virgil to guide Dante through Paradise — reason yields to faith.",
+    traits: ["Divine Love", "Grace", "Beauty", "Revelation"],
+    keyEvents: [
+      "Replaces Virgil as Dante's guide",
+      "Guides Dante through Paradise",
+      "Represents Dante's beloved and the Church",
+    ],
+    relationships: [
+      { name: "Dante", type: "Beloved / Charge" },
+      { name: "Virgil", type: "Predecessor Guide" },
+    ],
+    archetype: "The Divine Feminine",
+  },
 ];
 
 export function getCharacterById(id: string): Character | undefined {

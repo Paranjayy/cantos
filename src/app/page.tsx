@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { epics } from "@/lib/data/epics";
+import { getRandomFact } from "@/lib/data/facts";
 
 export default function Home() {
   return (
@@ -126,6 +127,18 @@ export default function Home() {
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center">
                 <svg className="w-6 h-6 text-[var(--accent-gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2 font-display">Connections</h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                See how characters and archetypes echo across traditions —
+                Achilles and Karna, Sita and Helen.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center">
+                <svg className="w-6 h-6 text-[var(--accent-gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -147,9 +160,63 @@ export default function Home() {
                 mortality — across every tradition.
               </p>
             </div>
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center">
+                <svg className="w-6 h-6 text-[var(--accent-gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2 font-display">Pathways</h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Thematic journeys across epics — follow a thread and see how
+                the same questions recur.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center">
+                <svg className="w-6 h-6 text-[var(--accent-gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2 font-display">Glossary</h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Key terms from Sanskrit, Greek, Latin, and Old English — the
+                vocabulary of epic literature.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Did You Know */}
+      <DidYouKnow />
     </div>
+  );
+}
+
+function DidYouKnow() {
+  const fact = getRandomFact();
+  const epic = epics.find((e) => e.slug === fact.epic);
+
+  return (
+    <section className="border-t border-[var(--border)] py-16">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+        <p className="text-xs tracking-[0.2em] uppercase text-[var(--text-muted)] mb-4">
+          Did you know?
+        </p>
+        <blockquote className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4 italic">
+          &ldquo;{fact.text}&rdquo;
+        </blockquote>
+        <div className="flex items-center justify-center gap-2">
+          <div
+            className="w-2 h-2 rounded-full"
+            style={{ backgroundColor: epic?.color || "#666" }}
+          />
+          <span className="text-sm text-[var(--text-muted)]">
+            {epic?.title}
+          </span>
+        </div>
+      </div>
+    </section>
   );
 }

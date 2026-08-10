@@ -17,6 +17,20 @@
   --accent-green: #047857;
 }
 
+html.light {
+  --bg-primary: #FAF9F6;
+  --bg-secondary: #F5F3EE;
+  --bg-card: #FFFFFF;
+  --bg-hover: #F0EDE8;
+  --text-primary: #1A1A1A;
+  --text-secondary: #555555;
+  --text-muted: #888888;
+  --border: #E0DDD8;
+  --border-hover: #C8C5C0;
+  --accent-gold: #8B6914;
+  --accent-gold-light: #A07A1C;
+}
+
 @theme inline {
   --color-background: var(--bg-primary);
   --color-foreground: var(--text-primary);
@@ -42,6 +56,11 @@ body {
 ::selection {
   background: rgba(201, 169, 110, 0.3);
   color: #E8D5B0;
+}
+
+html.light ::selection {
+  background: rgba(139, 105, 20, 0.2);
+  color: #8B6914;
 }
 
 .font-display {
@@ -97,6 +116,15 @@ body {
 
 .animate-pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }
 
 /* React Flow overrides */

@@ -7,9 +7,11 @@ const navLinks = [
   { href: "/epics", label: "Epics" },
   { href: "/family-tree", label: "Family Trees" },
   { href: "/characters", label: "Characters" },
+  { href: "/connections", label: "Connections" },
   { href: "/timeline", label: "Timeline" },
   { href: "/compare", label: "Compare" },
   { href: "/pathways", label: "Pathways" },
+  { href: "/glossary", label: "Glossary" },
 ];
 
 export default function MobileNav() {

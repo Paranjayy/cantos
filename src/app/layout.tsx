@@ -4,6 +4,7 @@ import "./globals.css";
 import Link from "next/link";
 import MobileNav from "@/components/MobileNav";
 import SearchPalette from "@/components/SearchPalette";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +26,11 @@ const navLinks = [
   { href: "/epics", label: "Epics" },
   { href: "/family-tree", label: "Family Trees" },
   { href: "/characters", label: "Characters" },
+  { href: "/connections", label: "Connections" },
   { href: "/timeline", label: "Timeline" },
   { href: "/compare", label: "Compare" },
   { href: "/pathways", label: "Pathways" },
+  { href: "/glossary", label: "Glossary" },
 ];
 
 export default function RootLayout({
@@ -36,8 +39,24 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem('cantos-theme');
+                if (theme === 'light') {
+                  document.documentElement.classList.remove('dark');
+                  document.documentElement.classList.add('light');
+                }
+              } catch(e) {}
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--bg-primary)]/80 backdrop-blur-xl">
           <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -47,7 +66,7 @@ export default function RootLayout({
                   Cantos
                 </span>
               </Link>
-              <div className="hidden md:flex items-center gap-1">
+              <div className="hidden lg:flex items-center gap-1">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -58,8 +77,9 @@ export default function RootLayout({
                   </Link>
                 ))}
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
                 <SearchPalette />
+                <ThemeToggle />
                 <MobileNav />
               </div>
             </div>
