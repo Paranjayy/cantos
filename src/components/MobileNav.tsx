@@ -10,8 +10,11 @@ const navLinks = [
   { href: "/connections", label: "Connections" },
   { href: "/timeline", label: "Timeline" },
   { href: "/compare", label: "Compare" },
+  { href: "/quotes", label: "Quotes" },
+  { href: "/quiz", label: "Quiz" },
   { href: "/pathways", label: "Pathways" },
   { href: "/glossary", label: "Glossary" },
+  { href: "/stats", label: "Stats" },
 ];
 
 export default function MobileNav() {

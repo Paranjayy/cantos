@@ -24,13 +24,13 @@ export const metadata: Metadata = {
 
 const navLinks = [
   { href: "/epics", label: "Epics" },
-  { href: "/family-tree", label: "Family Trees" },
+  { href: "/family-tree", label: "Trees" },
   { href: "/characters", label: "Characters" },
-  { href: "/connections", label: "Connections" },
+  { href: "/connections", label: "Links" },
   { href: "/timeline", label: "Timeline" },
   { href: "/compare", label: "Compare" },
-  { href: "/pathways", label: "Pathways" },
-  { href: "/glossary", label: "Glossary" },
+  { href: "/quotes", label: "Quotes" },
+  { href: "/quiz", label: "Quiz" },
 ];
 
 export default function RootLayout({

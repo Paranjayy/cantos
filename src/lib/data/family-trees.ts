@@ -152,6 +152,46 @@ export const familyTrees: FamilyTree[] = [
       { id: "peleus", name: "Peleus", spouse: "thetis", generation: 1, notes: "Mortal husband of Thetis. Father of Achilles." },
     ],
   },
+  {
+    id: "aeneas-lineage",
+    name: "House of Aeneas — Aeneid",
+    epic: "aeneid",
+    description:
+      "The Trojan hero Aeneas, son of Anchases and Aphrodite, who escapes the fall of Troy and founds what will become Rome. The bridge between Greek myth and Roman destiny.",
+    nodes: [
+      { id: "zeus-a", name: "Zeus", title: "King of the Gods", generation: 0, tags: ["divine"] },
+      { id: "aphrodite-a", name: "Aphrodite", title: "Goddess of Love", parent: "zeus-a", generation: 1, spouse: "anchises", tags: ["divine"] },
+      { id: "anchises", name: "Anchises", title: "Trojan Prince", parent: "zeus-a", generation: 1, spouse: "aphrodite-a", notes: "Old and frail, carried on Aeneas' back from burning Troy", tags: ["trojan"] },
+      { id: "aeneas", name: "Aeneas", title: "Hero of Troy / Founder of Rome", parent: "anchises", generation: 2, spouse: "creusa", notes: "Carries his father from Troy. Central figure of the Aeneid.", tags: ["hero", "trojan"] },
+      { id: "creusa", name: "Creusa", title: "Trojan Princess", spouse: "aeneas", generation: 2, notes: "Wife of Aeneas. Lost and killed during the fall of Troy." },
+      { id: "ascanius", name: "Ascanius (Iulus)", title: "Son of Aeneas", parent: "aeneas", generation: 3, notes: "Ancestor of Julius Caesar and the Julian clan", tags: ["prince"] },
+      { id: "dido", name: "Dido", title: "Queen of Carthage", generation: 2, notes: "Founds Carthage. Falls in love with Aeneas. Kills herself when he leaves.", tags: ["queen", "tragic"] },
+      { id: "turnus", name: "Turnus", title: "King of the Rutuli", generation: 2, notes: "Fights Aeneas for the right to marry Lavinia. Killed by Aeneas.", tags: ["warrior", "antagonist"] },
+      { id: "latinus", name: "Latinus", title: "King of Latium", generation: 2, tags: ["king"] },
+      { id: "lavinia", name: "Lavinia", title: "Princess of Latium", parent: "latinus", generation: 3, notes: "Marries Aeneas after Turnus' death. The Aeneid's ending.", tags: ["princess"] },
+      { id: "silvius", name: "Silvius", title: "King of Alba Longa", parent: "aeneas", generation: 3, notes: "Born after Aeneas' death. Ancestor of Romulus and Remus.", tags: ["king"] },
+    ],
+  },
+  {
+    id: "scylding-dynasty",
+    name: "Scylding Dynasty — Beowulf",
+    epic: "beowulf",
+    description:
+      "The Danish royal line from the legendary Scyld Scefing. Hrothgar, the great king who built Heorot, is the most prominent member. The dynasty connects to the broader world of Germanic heroic legend.",
+    nodes: [
+      { id: "scyld", name: "Scyld Scefing", title: "Founder of the Dynasty", generation: 0, notes: "Legendary founder. Arrived as a child in a mysterious ship, left in the same way.", tags: ["legendary"] },
+      { id: "beowulf-s", name: "Beowulf (the Danish king)", parent: "scyld", generation: 1, notes: "Not the hero of the poem — a Danish king, ancestor of Hrothgar" },
+      { id: "hrothgar", name: "Hrothgar", title: "King of the Danes", generation: 3, tags: ["king"], notes: "Built Heorot. Patron of Beowulf. Ruled 50 years." },
+      { id: "wealhtheow", name: "Wealhtheow", title: "Queen of the Danes", spouse: "hrothgar", generation: 3, tags: ["queen"], notes: "Hrothgar's wife. Offers the drinking cup to Beowulf." },
+      { id: "hrothulf", name: "Hrothulf", parent: "hrothgar", generation: 4, notes: "Hrothgar's nephew. May betray him after his death." },
+      { id: "heoroweard", name: "Heoroweard", parent: "hrothgar", generation: 4, notes: "Hrothgar's son. His conflict with Hrothulf causes civil war." },
+      { id: "unferth", name: "Unferth (Hunferth)", generation: 4, notes: "Hrothgar's advisor. Challenges Beowulf, then gives him the sword Hrunting.", tags: ["advisor"] },
+      { id: "wiglaf", name: "Wiglaf", title: "Beowulf's Kinsman", generation: 4, tags: ["warrior"], notes: "The only warrior who stays to fight the dragon with Beowulf. Inherits the kingdom." },
+      { id: "hygelac", name: "Hygelac", title: "King of the Geats", generation: 4, tags: ["king"], notes: "Beowulf's uncle and lord. His death brings Beowulf to power." },
+      { id: "hygd", name: "Hygd", title: "Queen of the Geats", spouse: "hygelac", generation: 4, tags: ["queen"] },
+      { id: "heardred", name: "Heardred", parent: "hygelac", generation: 5, notes: "Hygelac's son. Killed in battle. Beowulf becomes king." },
+    ],
+  },
 ];
 
 export function getFamilyTreeById(id: string): FamilyTree | undefined {
